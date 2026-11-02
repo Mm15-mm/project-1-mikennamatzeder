@@ -1,14 +1,7 @@
-:root {
-    --navy: #111b78;
-    --navy-deep: #0d176d;
-    --white: #f8f8f4;
-    --gray: #e5e6e4;
-    --text: #252525;
-    --font-body: Arial, Helvetica, sans-serif;
-    --font-display: Georigia, "Times New Roman", serif;
-}
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -16,27 +9,205 @@ html {
 }
 
 body {
-    margin: 0;
-    background: #f1f1ee;
-    color: var(--text);
-    font-family: var(--font-body);
+    background: #000C75;
+    color: #FFFFFF;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    line-height: 1.4;
 }
 
-.page {
-    width: min(100%-2rem, 1200px);
-    margin: 2rem auto;
-    background: var(--white);
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 1.1rem 2rem;
-    background: var (--white);
-}
-.logo {
-    font-size: clamp(1.7rem, 3vw, 2.5rem);
+h1, h2, h3 {
+    font-family: 'Kotta One', Georgia, serif;
     font-weight: 400;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Top and bottom bars */
+.site-nav, .site-footer {
+    background: #D9D9D9;
+    color: #1D1B1B;
+}
+
+.site-nav ul, .site-footer ul {
+    list-style: none;
+    display: grid;
+    align-items: center;
+    gap: 40px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 12px 24px;
+}
+
+.site-nav ul {
+    grid-template: auto / 60px auto 1fr;
+}
+
+.site-footer ul {
+    grid-template: auto / 60px auto auto auto auto auto;
+    justify-content: space-between;
+}
+
+.site-nav img, .site-footer img {
+    height: 50px;
+}
+
+.site-nav .title {
+    text-align: right;
+}
+
+.site-nav a:hover, .site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Page content */
+main {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 44px;
+}
+
+/* Hero: picture on the left, title on the right */
+.hero {
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    align-items: center;
+    gap: 54px;
+    padding: 54px 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    background: #D9D9D9;
+}
+
+.hero h1 {
+    text-align: center;
+}
+
+/* Highlights: three players in a row */
+.highlights {
+    border-top: 3px solid #FFFFFF;
+    padding: 40px 0 54px;
+    text-align: center;
+}
+
+.players {
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr;
+    gap: 60px;
+    margin-top: 28px;
+}
+
+.player img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #D9D9D9;
+    margin-bottom: 12px;
+}
+
+.player h3 {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.player p {
+    font-size: 18px;
+}
+
+/* Stay in touch box */
+.touch-box {
+    padding: 0 0 54px;
+    text-align: center;
+}
+
+.touch-box h2 {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    background: #BDBDBD;
+    color: #1D1B1B;
+    padding: 10px 14px;
+    font-size: 20px;
+}
+
+.button:hover {
+    background: #FFFFFF;
+}
+
+/* Roster, statistics, coaches, photos */
+.info {
+    border-top: 3px solid #FFFFFF;
+    padding: 40px 0 54px;
+    text-align: center;
+}
+
+.info p {
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+/* Page 2 (layout.html): positions */
+.page-title {
+    padding: 40px 0 28px;
+    text-align: center;
+}
+
+.positions {
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr;
+    gap: 28px;
+    padding-bottom: 40px;
+}
+
+.position img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #D9D9D9;
+}
+
+.position p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.court {
+    border-top: 3px solid #FFFFFF;
+    padding: 40px 0 54px;
+    text-align: center;
+}
+
+.court img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    background: #D9D9D9;
+    margin-bottom: 28px;
+}
+
+.court h2 {
+    font-size: 72px;
+    line-height: 1.1;
 }
